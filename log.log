@@ -1,0 +1,16 @@
+[INFO:] 2023/07/26 17:03:14.128684 driver.go:45: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/26 17:03:14.470301 main.go:26: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/26 17:03:29.692445 handler.go:34: Message : 'signup-API called'
+[INFO:] 2023/07/26 17:03:29.854051 handler.go:117: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/26 17:03:38.383825 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/26 17:03:38.492749 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/26 17:03:46.857090 handler.go:270: Message : 'UpdateProduct-API called'
+[INFO:] 2023/07/26 17:03:46.968786 handler.go:295: Message : 'Product updated successfully' Status : 200
+[INFO:] 2023/07/26 17:03:53.701791 handler.go:270: Message : 'UpdateProduct-API called'
+[INFO:] 2023/07/26 17:03:53.810717 handler.go:295: Message : 'Product updated successfully' Status : 200
+[INFO:] 2023/07/26 17:03:58.212380 handler.go:319: Message : 'Deleteproduct-API called'
+[ERROR:]2023/07/26 17:03:58.318324 handler.go:329: Error : 'Product not found' Status : 404
+[INFO:] 2023/07/26 17:04:04.098218 handler.go:319: Message : 'Deleteproduct-API called'
+[INFO:] 2023/07/26 17:04:04.208741 handler.go:322: Message : 'Product deleted successfully' Status : 200
+[INFO:] 2023/07/26 17:04:07.616453 handler.go:339: Message : 'GetAllProducts-API called'
+[INFO:] 2023/07/26 17:04:07.719893 handler.go:342: Message : 'Product(s) retrieved successfully' Status : 200
