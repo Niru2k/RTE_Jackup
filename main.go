@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"online/driver"
+	"online/router"
+)
 
 func main() {
-	fmt.Println("Hello Developer!!!")
+	//Establishing a DB-connection
+	Db := driver.DbConnection()
+
+	//Routing all the handlers
+	router.Router(Db)
 }
