@@ -83,9 +83,9 @@ func (db Database) AuthMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 				})
 			} else if claims["ExpiresAt"].(int64) < time.Now().Unix() {
 				repository.DeleteToken(db.Db, claims["User-id"].(string))
-				log.Error.Println("Error : 'session expired...login again!!!' Status : 440")
-				return c.JSON(http.StatusRequestTimeout, map[string]interface{}{
-					"status": 440,
+				log.Error.Println("Error : 'session expired...login again!!!' Status : 401")
+				return c.JSON(http.StatusUnauthorized, map[string]interface{}{
+					"status": 401,
 					"Error":  "session expired...login again!!!",
 				})
 			} else if !token.Valid {
@@ -108,7 +108,7 @@ func (db Database) AuthMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 }
 
 // Get a claims from the token
-func GetTokenClaims(c echo.Context) jwt.StandardClaims {
+func GetTokenClaims(c echo.Context) jwt.MapClaims {
 	log := logs.Log()
 	if err := helper.Config(".env"); err != nil {
 		log.Error.Println("Error : 'Error at loading '.env' file'")
@@ -119,7 +119,7 @@ func GetTokenClaims(c echo.Context) jwt.StandardClaims {
 			tokenString = tokenString[index+1:]
 		}
 	}
-	claims := jwt.StandardClaims{}
+	claims := jwt.MapClaims{}
 	jwt.ParseWithClaims(tokenString, &claims, func(token *jwt.Token) (interface{}, error) {
 		return []byte(os.Getenv("SECRET_KEY")), nil
 	})

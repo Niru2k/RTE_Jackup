@@ -86,9 +86,9 @@ func (db Database) Signup(c echo.Context) error {
 	//To check if the user details already exist or not
 	data, err := repository.ReadUserByEmail(db.Db, data)
 	if err == nil {
-		log.Error.Println("Error : 'user already exist' Status : 409")
-		return c.JSON(http.StatusBadRequest, map[string]interface{}{
-			"status": 409,
+		log.Error.Println("Error : 'user already exist' Status : 403")
+		return c.JSON(http.StatusForbidden, map[string]interface{}{
+			"status": 403,
 			"error":  "user already exist",
 		})
 	}
@@ -107,9 +107,9 @@ func (db Database) Signup(c echo.Context) error {
 
 	//Adding a user details into our database
 	if err = repository.CreateUser(db.Db, data); err != nil {
-		log.Error.Println("Error : 'email already exist' Status : 409")
-		return c.JSON(http.StatusConflict, map[string]interface{}{
-			"status": 409,
+		log.Error.Println("Error : 'email already exist' Status : 403")
+		return c.JSON(http.StatusForbidden, map[string]interface{}{
+			"status": 403,
 			"error":  "email already exist",
 		})
 	}
@@ -181,9 +181,9 @@ func (db Database) Login(c echo.Context) error {
 			}
 			auth.UserId, auth.Token = user.UserId, token
 			if err = repository.AddToken(db.Db, auth); err != nil {
-				log.Error.Printf("Error : '%s' Status : 409\n", err)
-				return c.JSON(http.StatusConflict, map[string]interface{}{
-					"status": 409,
+				log.Error.Printf("Error : '%s' Status : 403\n", err)
+				return c.JSON(http.StatusForbidden, map[string]interface{}{
+					"status": 403,
 					"error":  err.Error(),
 				})
 			}
@@ -305,3 +305,50 @@ func (db Database) UpdateProductById(c echo.Context) error {
 		"error":  "Product not found",
 	})
 }
+
+// Handler for delete a product by product-id
+func (db Database) DeleteProductById(c echo.Context) error {
+	log := logs.Log()
+	if err := middleware.AdminAuth(c); err != nil {
+		log.Error.Println("Error : 'unauthorized entry' Status : 401")
+		return c.JSON(http.StatusUnauthorized, map[string]interface{}{
+			"error":  "unauthorized entry",
+			"status": 401,
+		})
+	}
+	log.Info.Println("Message : 'Deleteproduct-API called'")
+	if _, err := repository.ReadProductByProductId(db.Db, c.Param("product_id")); err == nil {
+		repository.DeleteProductByProductId(db.Db, c.Param("product_id"))
+		log.Info.Println("Message : 'Product deleted successfully' Status : 200")
+		return c.JSON(http.StatusOK, map[string]interface{}{
+			"status":  200,
+			"message": "Product deleted Successfully!!!",
+		})
+	}
+
+	log.Error.Println("Error : 'Product not found' Status : 404")
+	return c.JSON(http.StatusNotFound, map[string]interface{}{
+		"status": 404,
+		"error":  "Product not found",
+	})
+}
+
+// Handler for get all products
+func (db Database) GetAllProducts(c echo.Context) error {
+	log := logs.Log()
+	log.Info.Println("Message : 'GetAllProducts-API called'")
+	Products, err := repository.ReadAllProducts(db.Db)
+	if err == nil {
+		log.Info.Println("Message : 'Product(s) retrieved successfully' Status : 200")
+		return c.JSON(http.StatusOK, map[string]interface{}{
+			"status":   200,
+			"Products": Products,
+		})
+	}
+	log.Error.Println("Error : 'Product not found' Status : 404")
+	return c.JSON(http.StatusNotFound, map[string]interface{}{
+		"status": 404,
+		"error":  "Product not found",
+	})
+}
+

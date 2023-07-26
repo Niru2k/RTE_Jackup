@@ -1,32 +1,36 @@
 package router
 
 import (
+	//user defined packages
 	"online/handler"
-	"online/logs"
 	"online/middleware"
 
+	//Third party packages
 	"github.com/labstack/echo"
 	"gorm.io/gorm"
 )
 
-func Router(Db *gorm.DB) {
-	log := logs.Log()
+// Signup and Login Handlers
+func LoginHandlers(Db *gorm.DB, app *echo.Echo) {
+	handler := handler.Database{Db: Db}
+	app.POST("/signup", handler.Signup)
+	app.POST("/login", handler.Login)
+}
+
+// These handlers are accessible only by admin
+func AdminHandlers(Db *gorm.DB, app *echo.Echo) {
 	handler := handler.Database{Db: Db}
 	middleware := middleware.Database{Db: Db}
-	e := echo.New()
+	admin := app.Group("/admin", middleware.AuthMiddleware)
+	admin.POST("/postProduct", handler.PostProduct)
+	admin.PUT("/updateProduct/:product_id", handler.UpdateProductById)
+	admin.DELETE("/deleteProduct/:product_id", handler.DeleteProductById)
+}
 
-	//Common for admin and user
-	e.POST("/signup", handler.Signup)
-	e.POST("/login", handler.Login)
-
-	//Only for admin
-	e.POST("/postproduct", handler.PostProduct, middleware.AuthMiddleware)
-	e.POST("/updateproduct/:product_id", handler.PostProduct, middleware.AuthMiddleware)
-
-	//Start a server
-	log.Info.Println("Message : 'Server starts in port 8000...' Status : 200")
-	if err := e.Start(":8000"); err != nil {
-		log.Info.Println("Message : 'Error at start a server...' Status : 500")
-		return
-	}
+// These handlers are accessible by both admin and user
+func CommonHandlers(Db *gorm.DB, app *echo.Echo) {
+	handler := handler.Database{Db: Db}
+	middleware := middleware.Database{Db: Db}
+	common := app.Group("/common", middleware.AuthMiddleware)
+	common.GET("/getAllProducts", handler.GetAllProducts, middleware.AuthMiddleware)
 }
