@@ -23,5 +23,7 @@ func TableCreation(Db *gorm.DB) {
 	Db.AutoMigrate(&models.User{})
 	Db.AutoMigrate(&models.Authentication{})
 	Db.AutoMigrate(&models.ProductInfo{})
+	Db.AutoMigrate(&models.OrderProductInfo{})
+	Db.AutoMigrate(&models.OrderStatus{})
 	AddRoles(Db)
 }

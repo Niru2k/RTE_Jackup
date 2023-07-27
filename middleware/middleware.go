@@ -45,7 +45,7 @@ func CreateToken(user models.User, c echo.Context) (string, error) {
 }
 
 type Database struct {
-	Db *gorm.DB
+	Connection *gorm.DB
 }
 
 // Token and claims validation
@@ -82,7 +82,7 @@ func (db Database) AuthMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 					"Error":  "Invalid token signature",
 				})
 			} else if claims["ExpiresAt"].(int64) < time.Now().Unix() {
-				repository.DeleteToken(db.Db, claims["User-id"].(string))
+				repository.DeleteToken(db.Connection, claims["User-id"].(string))
 				log.Error.Println("Error : 'session expired...login again!!!' Status : 401")
 				return c.JSON(http.StatusUnauthorized, map[string]interface{}{
 					"status": 401,

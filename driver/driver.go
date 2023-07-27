@@ -4,7 +4,6 @@ import (
 	//user defined packages
 	"online/helper"
 	"online/logs"
-	"online/repository"
 
 	//Inbuild packages
 	"fmt"
@@ -17,7 +16,7 @@ import (
 
 func DbConnection() *gorm.DB {
 	log := logs.Log()
-	
+
 	//Loading a '.env' file
 	if err := helper.Config(".env"); err != nil {
 		log.Error.Println("Error : 'Error at loading '.env' file'")
@@ -43,8 +42,5 @@ func DbConnection() *gorm.DB {
 		panic(err)
 	}
 	log.Info.Printf("Message : 'Established a successful connection to %s database!!!'\n", Dbname)
-
-	//Table creation
-	repository.TableCreation(Db)
 	return Db
 }

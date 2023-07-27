@@ -2,8 +2,10 @@ package main
 
 import (
 	//user defined package(s)
+
 	"online/driver"
 	"online/logs"
+	"online/repository"
 	"online/router"
 
 	//Third party package(s)
@@ -17,9 +19,13 @@ func main() {
 	//Establishing a DB-connection
 	Db := driver.DbConnection()
 
+	//Table creation
+	repository.TableCreation(Db)
+
 	//Routing all the handlers
 	router.LoginHandlers(Db, echo)
 	router.AdminHandlers(Db, echo)
+	router.UserHandlers(Db, echo)
 	router.CommonHandlers(Db, echo)
 
 	//Start a server
