@@ -44,9 +44,3 @@ func ReadProductIdByProductData(Db *gorm.DB, Product models.OrderProductInfo) (p
 	err = Db.Select("product_id").Where("brand_name=? AND product_price=? AND ram_capacity=? AND ram_price=?", Product.BrandName, Product.ProductPrice, Product.RamCapacity, Product.RamPrice).First(&product).Error
 	return
 }
-
-// Retrieve products's specifications by product_id
-func ReadProductDataByProductId(Db *gorm.DB, ProductId uint) (product models.ProductInfo, err error) {
-	err = Db.Where("product_id=?", ProductId).First(&product).Error
-	return
-}

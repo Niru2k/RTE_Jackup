@@ -1,0 +1,405 @@
+[INFO:] 2023/07/28 10:57:18.333439 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 10:57:18.715561 main.go:32: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 10:58:07.603428 handler.go:638: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 10:58:07.713844 handler.go:661: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 10:58:13.200420 handler.go:638: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 10:58:13.310911 handler.go:661: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 10:59:15.824225 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 10:59:15.824225 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 10:59:18.966376 handler.go:638: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 10:59:19.085987 handler.go:661: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 10:59:25.162253 handler.go:638: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 10:59:25.269792 handler.go:661: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 10:59:30.483463 handler.go:638: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 10:59:30.585763 handler.go:661: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 10:59:58.531665 handler.go:473: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 10:59:58.639958 handler.go:496: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 11:01:07.540467 handler.go:503: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 11:01:07.651157 handler.go:512: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:01:29.115820 handler.go:473: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 11:01:29.217524 handler.go:490: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:06:09.103936 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 11:06:09.104447 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 11:06:17.362952 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 11:06:17.477659 handler.go:430: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 11:07:01.088128 handler.go:640: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:07:01.196936 handler.go:663: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:16:54.469498 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 11:16:54.636790 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 11:19:04.927621 handler.go:289: Message : 'UpdateProduct-API called'
+[INFO:] 2023/07/28 11:19:05.039914 handler.go:314: Message : 'Product updated successfully' Status : 200
+[INFO:] 2023/07/28 11:19:27.816933 handler.go:338: Message : 'Deleteproduct-API called'
+[INFO:] 2023/07/28 11:19:27.931726 handler.go:341: Message : 'Product deleted successfully' Status : 200
+[INFO:] 2023/07/28 11:20:11.051766 handler.go:261: Message : 'GetAllProducts-API called'
+[INFO:] 2023/07/28 11:20:11.166833 handler.go:264: Message : 'Product(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:21:10.840585 handler.go:448: Message : 'Deleteorder-API called'
+[INFO:] 2023/07/28 11:21:10.951166 handler.go:458: Message : 'order deleted successfully' Status : 200
+[INFO:] 2023/07/28 11:21:34.261096 handler.go:475: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 11:21:34.377341 handler.go:492: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:22:53.413510 handler.go:543: Message : 'Payment-API called'
+[ERROR:]2023/07/28 11:22:53.516513 handler.go:581: Error : 'Already paid' Status : 400
+[ERROR:]2023/07/28 11:24:12.832207 handler.go:592: Error : 'unauthorized entry' Status : 401
+[INFO:] 2023/07/28 11:24:28.753583 handler.go:598: Message : 'UpdateOrderStatus-API called'
+[INFO:] 2023/07/28 11:24:28.858314 handler.go:623: Message : 'Order status updated successfully' Status : 200
+[INFO:] 2023/07/28 11:25:03.562633 handler.go:640: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:25:03.670039 handler.go:663: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:33:06.517901 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 11:33:06.518406 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 11:33:22.322179 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 11:33:22.473450 main.go:32: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 11:34:07.552041 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 11:34:07.724687 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 11:34:15.982621 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 11:34:16.140451 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 11:34:20.210944 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 11:34:20.394258 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 11:34:29.277800 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 11:34:29.473294 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 11:34:45.392496 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 11:34:45.514431 handler.go:251: Message : 'Product added successfully' Status : 200
+[ERROR:]2023/07/28 11:35:30.680814 handler.go:360: Error : 'unauthorized entry' Status : 401
+[ERROR:]2023/07/28 11:35:49.264744 handler.go:360: Error : 'unauthorized entry' Status : 401
+[INFO:] 2023/07/28 11:36:22.434657 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 11:36:22.604041 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 11:36:29.421358 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 11:36:29.590864 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 11:36:45.399116 handler.go:366: Message : 'AddOrder-API called'
+[ERROR:]2023/07/28 11:36:45.514994 handler.go:402: Error : 'Product is not found' Status : 404 
+[INFO:] 2023/07/28 11:36:53.984061 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 11:36:54.114437 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 11:37:59.381071 handler.go:639: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:37:59.497190 handler.go:662: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:38:52.477490 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 11:38:52.649756 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 11:38:57.197748 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 11:38:57.360529 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 11:39:37.188953 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 11:39:37.294275 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 11:39:45.636942 handler.go:639: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:39:45.744742 handler.go:662: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:41:19.459266 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 11:41:19.459266 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 11:41:41.192082 handler.go:639: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:41:41.304516 handler.go:663: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:42:14.026551 handler.go:639: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:42:14.133650 handler.go:663: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:46:30.448753 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 11:46:30.448753 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 11:46:39.201472 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 11:46:39.316680 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 11:47:38.379999 handler.go:366: Message : 'AddOrder-API called'
+[ERROR:]2023/07/28 11:47:38.487791 handler.go:402: Error : 'Product is not found' Status : 404 
+[INFO:] 2023/07/28 11:47:54.240744 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 11:47:54.350055 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 11:48:49.984555 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 11:48:50.094855 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 11:49:19.739985 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:49:19.846635 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:53:07.057927 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 11:53:07.058431 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 11:53:18.868618 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:53:19.003052 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 11:56:19.714864 handler.go:594: Message : 'UpdateOrderStatus-API called'
+[INFO:] 2023/07/28 11:56:19.824770 handler.go:619: Message : 'Order status updated successfully' Status : 200
+[INFO:] 2023/07/28 11:57:42.774874 handler.go:447: Message : 'Deleteorder-API called'
+[INFO:] 2023/07/28 11:57:42.880040 handler.go:457: Message : 'order deleted successfully' Status : 200
+[INFO:] 2023/07/28 11:58:46.973977 handler.go:594: Message : 'UpdateOrderStatus-API called'
+[INFO:] 2023/07/28 11:58:47.082339 handler.go:619: Message : 'Order status updated successfully' Status : 200
+[INFO:] 2023/07/28 11:59:19.918644 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 11:59:20.021506 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 12:35:02.083809 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 12:35:02.084313 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[ERROR:]2023/07/28 12:35:04.514754 handler.go:669: Error : 'unauthorized entry' Status : 401
+[INFO:] 2023/07/28 12:35:18.646304 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 12:35:18.756337 handler.go:685: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 12:47:59.391152 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 12:47:59.391152 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 12:48:02.882410 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 12:48:02.992077 handler.go:698: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 12:48:05.902396 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 12:48:06.009565 handler.go:698: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 13:16:57.639462 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:16:57.639965 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:17:01.962802 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 13:17:02.077413 handler.go:699: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 13:18:43.639091 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 13:18:43.749245 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 13:20:42.360302 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:20:42.360302 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:20:46.141504 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 13:20:46.256664 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 13:20:49.573538 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 13:20:49.684081 handler.go:700: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 13:22:55.933653 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:22:56.113048 main.go:32: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:23:16.726375 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 13:23:16.902799 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 13:23:27.733898 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 13:23:27.920524 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 13:23:35.447475 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 13:23:35.611046 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 13:23:42.367615 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 13:23:42.533907 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 13:24:17.047670 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 13:24:17.154365 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 13:24:33.377057 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 13:24:33.486935 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 13:31:28.032486 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:31:28.032990 main.go:37: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:33:06.062600 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:33:06.063103 main.go:44: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:34:56.031508 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:34:56.032012 main.go:46: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:37:27.453403 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:37:27.455412 main.go:49: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:37:58.787143 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:37:58.787646 main.go:50: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:42:24.913806 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:42:24.914310 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:42:47.704067 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 13:42:47.704570 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 13:57:56.095165 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 14:01:59.316753 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:10:05.776208 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:10:05.928015 main.go:34: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:10:33.536941 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 15:10:33.699455 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 15:10:46.446170 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 15:10:46.614354 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 15:10:52.432558 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 15:10:52.600651 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 15:11:05.487960 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 15:11:05.602626 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 15:11:12.899473 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 15:11:13.006753 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 15:11:25.147661 handler.go:261: Message : 'GetAllProducts-API called'
+[INFO:] 2023/07/28 15:11:25.255851 handler.go:264: Message : 'Product(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:11:42.155801 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 15:11:42.331415 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 15:11:57.688612 handler.go:366: Message : 'AddOrder-API called'
+[ERROR:]2023/07/28 15:11:57.794394 handler.go:402: Error : 'Product is not found' Status : 404 
+[INFO:] 2023/07/28 15:12:15.130737 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 15:12:15.253942 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 15:12:27.659883 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 15:12:27.766068 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:12:51.650423 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 15:12:51.767818 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 15:12:58.612691 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 15:12:58.715152 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[ERROR:]2023/07/28 15:13:13.802492 handler.go:669: Error : 'unauthorized entry' Status : 401
+[INFO:] 2023/07/28 15:13:33.269267 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 15:13:33.380490 handler.go:700: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:13:56.355564 handler.go:539: Message : 'Payment-API called'
+[ERROR:]2023/07/28 15:13:56.463264 handler.go:571: Error : 'Payment not matching with the order price' Status : 400
+[INFO:] 2023/07/28 15:14:06.070814 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 15:14:06.178619 handler.go:700: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:17:28.289368 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:17:28.289871 main.go:33: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:17:32.774331 handler.go:675: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 15:17:32.882662 handler.go:700: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:19:30.725697 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:19:30.725697 main.go:33: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:19:41.411299 handler.go:474: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 15:19:41.518537 handler.go:492: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 15:19:59.947020 handler.go:499: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:20:00.054935 handler.go:510: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:21:25.523162 handler.go:474: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:21:25.631521 handler.go:486: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:21:58.802609 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 15:21:58.969452 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 15:22:05.167883 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 15:22:05.332232 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 15:22:37.133044 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 15:22:37.253424 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 15:22:45.613575 handler.go:636: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 15:22:45.723579 handler.go:658: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:22:51.778265 handler.go:474: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:22:51.892266 handler.go:486: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:23:03.587802 handler.go:474: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 15:23:03.692568 handler.go:492: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 15:23:24.878743 handler.go:474: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 15:23:24.985310 handler.go:492: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 15:25:25.411448 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:25:25.411953 main.go:33: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:25:29.102386 handler.go:474: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 15:25:29.208346 handler.go:496: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 15:25:41.607696 handler.go:503: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:25:41.715546 handler.go:518: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:28:21.918753 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:28:21.941561 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:28:22.052855 main.go:34: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:34:01.938929 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:34:01.961698 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:34:02.077868 main.go:34: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:34:19.886267 handler.go:474: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:38:59.667633 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:38:59.667633 main.go:34: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:39:12.995009 handler.go:474: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 15:39:13.103839 handler.go:497: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 15:39:58.245574 handler.go:474: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:39:58.354978 handler.go:491: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:40:41.472787 handler.go:366: Message : 'AddOrder-API called'
+[ERROR:]2023/07/28 15:40:41.574488 handler.go:402: Error : 'Product is not found' Status : 404 
+[INFO:] 2023/07/28 15:41:37.238299 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:41:37.382887 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:42:03.383296 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 15:42:03.545268 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 15:42:16.982044 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 15:42:17.147006 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 15:42:23.708897 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/07/28 15:42:23.812397 handler.go:90: Error : 'user already exist' Status : 400
+[INFO:] 2023/07/28 15:42:30.785831 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 15:42:30.959449 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 15:43:04.184570 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 15:43:04.353485 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 15:43:16.718849 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 15:43:16.829960 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 15:43:21.475977 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 15:43:21.582002 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 15:43:29.078622 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 15:43:29.264496 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 15:43:54.341054 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 15:43:54.462351 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 15:44:04.970430 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 15:44:05.149315 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 15:44:31.047085 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 15:44:31.161621 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 15:44:38.045739 handler.go:645: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 15:44:38.147937 handler.go:667: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:45:20.433796 handler.go:504: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:45:20.540830 handler.go:519: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:45:36.651612 handler.go:474: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:45:36.761122 handler.go:491: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:45:55.462865 handler.go:474: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 15:45:55.577962 handler.go:491: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 15:49:39.075360 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 15:49:39.076883 main.go:34: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 15:49:41.843511 handler.go:447: Message : 'Deleteorder-API called'
+[INFO:] 2023/07/28 15:49:41.957823 handler.go:458: Message : 'order deleted successfully' Status : 200
+[INFO:] 2023/07/28 15:50:56.550666 handler.go:684: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 15:50:56.657809 handler.go:707: Message : 'Order statuses retrieved successfully' Status : 200
+[INFO:] 2023/07/28 19:02:19.692326 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:02:19.813466 main.go:36: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:05:32.579741 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:10:22.775535 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:10:22.884830 main.go:34: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:12:47.406287 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:13:01.810187 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:13:01.970804 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:23:10.856105 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:23:11.021319 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:23:32.507766 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:24:21.118573 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:25:11.971818 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:28:25.054742 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:30:28.113931 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:32:05.160251 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:32:05.307068 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:32:05.444071 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:32:05.589656 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:40:31.162967 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:41:54.000411 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:41:54.267265 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:41:54.380424 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:45:26.826094 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:49:02.529754 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:49:02.705045 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:49:19.294183 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:49:19.424894 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:55:23.974297 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:55:24.093569 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:56:44.790789 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:56:44.918212 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:57:26.917928 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:57:27.038945 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 19:58:20.095302 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:58:20.237097 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 19:58:20.355138 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 20:01:55.909084 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 20:01:56.068945 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 20:01:56.266894 main.go:35: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 20:12:48.675439 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/07/28 20:12:48.828769 main.go:33: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/07/28 20:13:08.477428 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 20:13:08.644322 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 20:13:17.715979 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 20:13:17.881716 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 20:13:23.997677 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/07/28 20:13:24.159159 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/07/28 20:13:31.972521 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 20:13:32.132812 handler.go:192: Message : 'login successful!!!' Status : 200
+[ERROR:]2023/07/28 20:13:53.595446 handler.go:217: Error : 'unauthorized entry' Status : 401
+[INFO:] 2023/07/28 20:14:19.990558 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 20:14:20.149868 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 20:14:39.381135 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 20:14:39.492974 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 20:15:00.986078 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 20:15:01.092210 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 20:16:30.967172 handler.go:289: Message : 'UpdateProduct-API called'
+[INFO:] 2023/07/28 20:16:31.074919 handler.go:314: Message : 'Product updated successfully' Status : 200
+[INFO:] 2023/07/28 20:16:54.863582 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 20:16:54.973902 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 20:17:00.434533 handler.go:338: Message : 'Deleteproduct-API called'
+[INFO:] 2023/07/28 20:17:00.543610 handler.go:341: Message : 'Product deleted successfully' Status : 200
+[INFO:] 2023/07/28 20:17:09.615928 handler.go:223: Message : 'AddProduct-API called'
+[INFO:] 2023/07/28 20:17:09.719937 handler.go:251: Message : 'Product added successfully' Status : 200
+[INFO:] 2023/07/28 20:17:16.383257 handler.go:338: Message : 'Deleteproduct-API called'
+[ERROR:]2023/07/28 20:17:16.487262 handler.go:348: Error : 'Product not found' Status : 404
+[INFO:] 2023/07/28 20:17:20.245550 handler.go:338: Message : 'Deleteproduct-API called'
+[INFO:] 2023/07/28 20:17:20.354832 handler.go:341: Message : 'Product deleted successfully' Status : 200
+[INFO:] 2023/07/28 20:17:39.956102 handler.go:261: Message : 'GetAllProducts-API called'
+[INFO:] 2023/07/28 20:17:40.064507 handler.go:264: Message : 'Product(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:17:54.783672 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/07/28 20:17:54.947190 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/07/28 20:18:19.999774 handler.go:366: Message : 'AddOrder-API called'
+[ERROR:]2023/07/28 20:18:20.105674 handler.go:402: Error : 'Product is not found' Status : 404 
+[INFO:] 2023/07/28 20:18:25.259451 handler.go:366: Message : 'AddOrder-API called'
+[ERROR:]2023/07/28 20:18:25.368179 handler.go:402: Error : 'Product is not found' Status : 404 
+[INFO:] 2023/07/28 20:18:44.023692 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 20:18:44.139541 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 20:18:55.035013 handler.go:645: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 20:18:55.143331 handler.go:667: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:19:19.215282 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 20:19:19.326040 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 20:19:43.503216 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 20:19:43.625690 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 20:20:02.861462 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 20:20:02.970209 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 20:20:09.493556 handler.go:645: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 20:20:09.605932 handler.go:667: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:20:33.581078 handler.go:475: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 20:20:33.696017 handler.go:497: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 20:20:45.661226 handler.go:261: Message : 'GetAllProducts-API called'
+[INFO:] 2023/07/28 20:20:45.767178 handler.go:264: Message : 'Product(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:21:07.970582 handler.go:261: Message : 'GetAllProducts-API called'
+[INFO:] 2023/07/28 20:21:08.077950 handler.go:264: Message : 'Product(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:21:25.993351 handler.go:475: Message : 'GetOrders-API called'
+[ERROR:]2023/07/28 20:21:26.098101 handler.go:497: Error : 'Order not found' Status : 404
+[INFO:] 2023/07/28 20:21:44.898628 handler.go:504: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 20:21:45.004230 handler.go:519: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:21:58.585720 handler.go:475: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 20:21:58.693625 handler.go:491: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:22:49.662226 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 20:22:49.770463 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 20:22:55.212292 handler.go:366: Message : 'AddOrder-API called'
+[INFO:] 2023/07/28 20:22:55.321557 handler.go:429: Message : 'Order added successfully' Status : 200
+[INFO:] 2023/07/28 20:23:19.354067 handler.go:475: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 20:23:19.459882 handler.go:491: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:23:39.654637 handler.go:475: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 20:23:39.761961 handler.go:491: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:23:55.604285 handler.go:504: Message : 'GetOrders-API called'
+[INFO:] 2023/07/28 20:23:55.710616 handler.go:519: Message : 'Order(s) retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:24:34.801411 handler.go:548: Message : 'Payment-API called'
+[ERROR:]2023/07/28 20:24:34.915800 handler.go:580: Error : 'Payment not matching with the order price' Status : 400
+[INFO:] 2023/07/28 20:24:45.071217 handler.go:548: Message : 'Payment-API called'
+[ERROR:]2023/07/28 20:24:45.176218 handler.go:580: Error : 'Payment not matching with the order price' Status : 400
+[INFO:] 2023/07/28 20:29:25.832008 handler.go:548: Message : 'Payment-API called'
+[ERROR:]2023/07/28 20:29:25.939271 handler.go:580: Error : 'Payment not matching with the order price' Status : 400
+[INFO:] 2023/07/28 20:29:47.911891 handler.go:548: Message : 'Payment-API called'
+[INFO:] 2023/07/28 20:29:48.023544 handler.go:573: Message : 'Payment successful' Status : 200
+[INFO:] 2023/07/28 20:30:16.754016 handler.go:603: Message : 'UpdateOrderStatus-API called'
+[INFO:] 2023/07/28 20:30:16.862460 handler.go:628: Message : 'Order status updated successfully' Status : 200
+[INFO:] 2023/07/28 20:30:28.141151 handler.go:645: Message : 'GetOrderStatus-API called'
+[INFO:] 2023/07/28 20:30:28.256003 handler.go:667: Message : 'Order status retrieved successfully' Status : 200
+[INFO:] 2023/07/28 20:30:31.985674 handler.go:684: Message : 'GetAllOrderStatus-API called'
+[INFO:] 2023/07/28 20:30:32.094884 handler.go:707: Message : 'Order statuses retrieved successfully' Status : 200

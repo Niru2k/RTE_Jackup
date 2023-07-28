@@ -21,6 +21,10 @@ import (
 	"gorm.io/gorm"
 )
 
+type Database struct {
+	Connection *gorm.DB
+}
+
 // Create a JWT token with the needed claims
 func CreateToken(user models.User, c echo.Context) (string, error) {
 	log := logs.Log()
@@ -42,10 +46,6 @@ func CreateToken(user models.User, c echo.Context) (string, error) {
 		return "", err
 	}
 	return tokenString, nil
-}
-
-type Database struct {
-	Connection *gorm.DB
 }
 
 // Token and claims validation

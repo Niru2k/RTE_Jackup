@@ -16,7 +16,7 @@ import (
 
 func DbConnection() *gorm.DB {
 	log := logs.Log()
-
+	
 	//Loading a '.env' file
 	if err := helper.Config(".env"); err != nil {
 		log.Error.Println("Error : 'Error at loading '.env' file'")

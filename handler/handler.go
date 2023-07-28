@@ -397,7 +397,7 @@ func (db Database) AddOrder(c echo.Context) error {
 	claims := middleware.GetTokenClaims(c)
 	UserId, _ := strconv.Atoi(claims["User-id"].(string))
 	order.UserId = uint(UserId)
-	product, err := repository.ReadProductIdByProductData(db.Connection, order)
+	_, err := repository.ReadProductIdByProductData(db.Connection, order)
 	if err != nil {
 		log.Error.Printf("Error : 'Product is not found' Status : 404 ")
 		return c.JSON(http.StatusBadRequest, map[string]interface{}{
@@ -405,7 +405,6 @@ func (db Database) AddOrder(c echo.Context) error {
 			"error":  "Product is not found",
 		})
 	}
-	order.ProductId = product.ProductId
 	productPrice, _ := strconv.Atoi(order.ProductPrice)
 	ramPrice, _ := strconv.Atoi(order.RamPrice)
 	if order.DvdRwDrive {
@@ -426,10 +425,12 @@ func (db Database) AddOrder(c echo.Context) error {
 	status.OrderId = orderId
 	status.UserId = order.UserId
 	repository.CreateOrderStatus(db.Connection, status)
+	URL := fmt.Sprintf("http://:8000/common/getOrderStatus/%v", orderId)
 	log.Info.Println("Message : 'Order added successfully' Status : 200")
 	return c.JSON(http.StatusOK, map[string]interface{}{
-		"status":  200,
-		"message": "Order added successfully",
+		"status":                           200,
+		"message":                          "Order added successfully",
+		"click here to get a order status": URL,
 	})
 }
 
@@ -453,6 +454,7 @@ func (db Database) CancelOrderById(c echo.Context) error {
 		status.PaymentStatus = "Refunded"
 		status.OrderStatus = "cancelled"
 		repository.UpdateOrderStatus(db.Connection, status)
+		repository.DeleteOrderStatus(db.Connection, status)
 		log.Info.Println("Message : 'order deleted successfully' Status : 200")
 		return c.JSON(http.StatusOK, map[string]interface{}{
 			"status":  200,
@@ -476,11 +478,10 @@ func (db Database) GetOrders(c echo.Context) error {
 		OrderData := make([]models.OrderProductReq, len(Orders))
 		if err == nil && len(Orders) > 0 {
 			for index, order := range Orders {
-				productData, _ := repository.ReadProductDataByProductId(db.Connection, order.ProductId)
-				OrderData[index].BrandName = productData.BrandName
-				OrderData[index].ProductPrice = productData.ProductPrice
-				OrderData[index].RamCapacity = productData.RamCapacity
-				OrderData[index].RamPrice = productData.RamPrice
+				OrderData[index].BrandName = order.BrandName
+				OrderData[index].ProductPrice = order.ProductPrice
+				OrderData[index].RamCapacity = order.RamCapacity
+				OrderData[index].RamPrice = order.RamPrice
 				OrderData[index].DvdRwDrive = order.DvdRwDrive
 				OrderData[index].Name = order.Name
 				OrderData[index].Address = order.Address
@@ -505,9 +506,15 @@ func (db Database) GetOrders(c echo.Context) error {
 		OrderData := make([]models.OrderProductReq, len(Orders))
 		if err == nil && len(Orders) > 0 {
 			for index, order := range Orders {
-				productData, _ := repository.ReadProductDataByProductId(db.Connection, order.ProductId)
-				OrderData[index].BrandName, OrderData[index].ProductPrice, OrderData[index].RamCapacity, OrderData[index].RamPrice = productData.BrandName, productData.ProductPrice, productData.RamCapacity, productData.RamPrice
-				OrderData[index].DvdRwDrive, OrderData[index].Name, OrderData[index].Address, OrderData[index].PhoneNumber, OrderData[index].TotalPrice = order.DvdRwDrive, order.Name, order.Address, order.PhoneNumber, order.TotalPrice
+				OrderData[index].BrandName = order.BrandName
+				OrderData[index].ProductPrice = order.ProductPrice
+				OrderData[index].RamCapacity = order.RamCapacity
+				OrderData[index].RamPrice = order.RamPrice
+				OrderData[index].DvdRwDrive = order.DvdRwDrive
+				OrderData[index].Name = order.Name
+				OrderData[index].Address = order.Address
+				OrderData[index].PhoneNumber = order.PhoneNumber
+				OrderData[index].TotalPrice = order.TotalPrice
 			}
 			log.Info.Println("Message : 'Order(s) retrieved successfully' Status : 200")
 			return c.JSON(http.StatusOK, map[string]interface{}{
@@ -647,8 +654,7 @@ func (db Database) GetOrderStatusById(c echo.Context) error {
 		})
 	}
 	order, _ := repository.ReadOrderByOrderId(db.Connection, c.Param("order_id"))
-	productData, _ := repository.ReadProductDataByProductId(db.Connection, order.ProductId)
-	Status.BrandName = productData.BrandName
+	Status.BrandName = order.BrandName
 	Status.Name = order.Name
 	Status.Address = order.Address
 	Status.PhoneNumber = order.PhoneNumber
@@ -662,5 +668,45 @@ func (db Database) GetOrderStatusById(c echo.Context) error {
 	return c.JSON(http.StatusOK, map[string]interface{}{
 		"status":       200,
 		"Order Status": Status,
+	})
+}
+
+// Handler for get all order status
+func (db Database) GetAllOrderStatus(c echo.Context) error {
+	log := logs.Log()
+	if err := middleware.AdminAuth(c); err != nil {
+		log.Error.Println("Error : 'unauthorized entry' Status : 401")
+		return c.JSON(http.StatusUnauthorized, map[string]interface{}{
+			"error":  "unauthorized entry",
+			"status": 401,
+		})
+	}
+	log.Info.Println("Message : 'GetAllOrderStatus-API called'")
+	Statuses, err := repository.ReadOrderStatus(db.Connection)
+	if err != nil && len(Statuses) == 0 {
+		log.Error.Println("Error : 'Status not found' Status : 404")
+		return c.JSON(http.StatusNotFound, map[string]interface{}{
+			"status": 404,
+			"error":  "Status not found",
+		})
+	}
+	for index, status := range Statuses {
+		orderId := strconv.Itoa(int(status.OrderId))
+		order, _ := repository.ReadOrderByOrderId(db.Connection, orderId)
+		Statuses[index].BrandName = order.BrandName
+		Statuses[index].Name = order.Name
+		Statuses[index].Address = order.Address
+		Statuses[index].PhoneNumber = order.PhoneNumber
+		Statuses[index].TotalPrice = order.TotalPrice
+		if order.DvdRwDrive {
+			Statuses[index].IncludedProduct = "DVD RW Drive"
+		} else {
+			Statuses[index].IncludedProduct = "None"
+		}
+	}
+	log.Info.Println("Message : 'Order statuses retrieved successfully' Status : 200")
+	return c.JSON(http.StatusOK, map[string]interface{}{
+		"status":         200,
+		"Order Statuses": Statuses,
 	})
 }

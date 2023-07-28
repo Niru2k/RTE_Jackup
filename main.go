@@ -2,10 +2,10 @@ package main
 
 import (
 	//user defined package(s)
-
+	"online/Lookup"
 	"online/driver"
 	"online/logs"
-	"online/repository"
+	"online/models"
 	"online/router"
 
 	//Third party package(s)
@@ -19,8 +19,9 @@ func main() {
 	//Establishing a DB-connection
 	Db := driver.DbConnection()
 
-	//Table creation
-	repository.TableCreation(Db)
+	//Checking for a database updates
+	Db.AutoMigrate(&models.Updates{})
+	Lookup.UpdateDatabase(Db)
 
 	//Routing all the handlers
 	router.LoginHandlers(Db, echo)

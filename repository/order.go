@@ -36,7 +36,7 @@ func ReadOrdersByAdmin(Db *gorm.DB) (Orders []models.OrderProductInfo, err error
 
 // Retrieve a Order by Order-id
 func ReadOrderByOrderId(Db *gorm.DB, orderId string) (Order models.OrderProductInfo, err error) {
-	err = Db.Where("order_id=?", orderId).First(&Order).Error
+	err = Db.Unscoped().Where("order_id=?", orderId).First(&Order).Error
 	return
 }
 
@@ -68,4 +68,16 @@ func UpdateOrderStatus(Db *gorm.DB, Order models.OrderStatus) error {
 func ReadOrderStatusByOrderId(Db *gorm.DB, orderId uint) (Order models.OrderStatus, err error) {
 	err = Db.Where("order_id=?", orderId).First(&Order).Error
 	return
+}
+
+// Retrieve all Order Statuses
+func ReadOrderStatus(Db *gorm.DB) (OrderStatus []models.OrderStatus, err error) {
+	err = Db.Unscoped().Find(&OrderStatus).Error
+	return
+}
+
+// Delete a status of the order in the Orderstatus table
+func DeleteOrderStatus(Db *gorm.DB, Order models.OrderStatus) error {
+	err := Db.Where("order_id=?", Order.OrderId).Delete(&Order).Error
+	return err
 }

@@ -26,6 +26,7 @@ func AdminHandlers(Db *gorm.DB, app *echo.Echo) {
 	admin.PUT("/updateProduct/:product_id", handler.UpdateProductById)
 	admin.DELETE("/deleteProduct/:product_id", handler.DeleteProductById)
 	admin.PUT("/updateStatus/:order_id", handler.UpdateOrderStatusById)
+	admin.GET("/getOrderStatuses", handler.GetAllOrderStatus)
 }
 
 // These handlers are accessible only by user
