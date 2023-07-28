@@ -16,11 +16,6 @@ import (
 	"gorm.io/gorm"
 )
 
-type LookupFile struct {
-	Name    string
-	Version int
-}
-
 func UpdateDatabase(Db *gorm.DB) {
 	var update []models.Updates
 	var check bool
@@ -44,7 +39,7 @@ func UpdateDatabase(Db *gorm.DB) {
 			index := strings.LastIndex(files[i].Name(), extension)
 			update1.FileName = files[i].Name()[:index]
 			Db.Create(&update1)
-			log.Println(update1.FileName,"is updated...")
+			log.Println(update1.FileName, "is updated...")
 			update := dbUpdates.Update{}
 			update.Invoke(update1.FileName)
 		}

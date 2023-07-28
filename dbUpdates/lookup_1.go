@@ -1,6 +1,7 @@
 package dbUpdates
 
 import (
+	//user defined package(s)
 	"online/driver"
 	"online/models"
 )
