@@ -24,6 +24,7 @@ func UpdateDatabase(Db *gorm.DB) {
 		log.Println("Error :", err)
 		return
 	}
+	Db.AutoMigrate(&models.Updates{})
 	Db.Find(&update)
 	for i := 0; i < len(files); i++ {
 		for _, value := range update {

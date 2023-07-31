@@ -653,7 +653,7 @@ func (db Database) GetOrderStatusById(c echo.Context) error {
 			"error":  "Order not found",
 		})
 	}
-	order, _ := repository.ReadOrderByOrderId(db.Connection, c.Param("order_id"))
+	order, _ := repository.ReadOrderByOrderIdUs(db.Connection, c.Param("order_id"))
 	Status.BrandName = order.BrandName
 	Status.Name = order.Name
 	Status.Address = order.Address
@@ -692,7 +692,7 @@ func (db Database) GetAllOrderStatus(c echo.Context) error {
 	}
 	for index, status := range Statuses {
 		orderId := strconv.Itoa(int(status.OrderId))
-		order, _ := repository.ReadOrderByOrderId(db.Connection, orderId)
+		order, _ := repository.ReadOrderByOrderIdUs(db.Connection, orderId)
 		Statuses[index].BrandName = order.BrandName
 		Statuses[index].Name = order.Name
 		Statuses[index].Address = order.Address

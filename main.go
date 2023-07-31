@@ -5,7 +5,6 @@ import (
 	"online/Lookup"
 	"online/driver"
 	"online/logs"
-	"online/models"
 	"online/router"
 
 	//Third party package(s)
@@ -20,7 +19,6 @@ func main() {
 	Db := driver.DbConnection()
 
 	//Checking for a database updates
-	Db.AutoMigrate(&models.Updates{})
 	Lookup.UpdateDatabase(Db)
 
 	//Routing all the handlers

@@ -2,7 +2,6 @@ package repository
 
 import (
 	//user defined package(s)
-
 	"online/models"
 
 	//Third party package(s)
@@ -35,8 +34,14 @@ func ReadOrdersByAdmin(Db *gorm.DB) (Orders []models.OrderProductInfo, err error
 }
 
 // Retrieve a Order by Order-id
-func ReadOrderByOrderId(Db *gorm.DB, orderId string) (Order models.OrderProductInfo, err error) {
+func ReadOrderByOrderIdUs(Db *gorm.DB, orderId string) (Order models.OrderProductInfo, err error) {
 	err = Db.Unscoped().Where("order_id=?", orderId).First(&Order).Error
+	return
+}
+
+// Retrieve a Order by Order-id
+func ReadOrderByOrderId(Db *gorm.DB, orderId string) (Order models.OrderProductInfo, err error) {
+	err = Db.Where("order_id=?", orderId).First(&Order).Error
 	return
 }
 
@@ -66,7 +71,7 @@ func UpdateOrderStatus(Db *gorm.DB, Order models.OrderStatus) error {
 
 // Retrieve a OrderStatus by Order-id
 func ReadOrderStatusByOrderId(Db *gorm.DB, orderId uint) (Order models.OrderStatus, err error) {
-	err = Db.Where("order_id=?", orderId).First(&Order).Error
+	err = Db.Unscoped().Where("order_id=?", orderId).First(&Order).Error
 	return
 }
 
