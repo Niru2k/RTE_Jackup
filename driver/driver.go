@@ -4,7 +4,6 @@ import (
 	//user defined packages
 	"online/helper"
 	"online/logs"
-	"online/repository"
 
 	//Inbuild packages
 	"fmt"
@@ -43,8 +42,5 @@ func DbConnection() *gorm.DB {
 		panic(err)
 	}
 	log.Info.Printf("Message : 'Established a successful connection to %s database!!!'\n", Dbname)
-
-	//Table creation
-	repository.TableCreation(Db)
 	return Db
 }

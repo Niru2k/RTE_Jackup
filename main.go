@@ -2,6 +2,7 @@ package main
 
 import (
 	//user defined package(s)
+	"online/Lookup"
 	"online/driver"
 	"online/logs"
 	"online/router"
@@ -17,9 +18,13 @@ func main() {
 	//Establishing a DB-connection
 	Db := driver.DbConnection()
 
+	//Checking for a database updates
+	Lookup.UpdateDatabase(Db)
+
 	//Routing all the handlers
 	router.LoginHandlers(Db, echo)
 	router.AdminHandlers(Db, echo)
+	router.UserHandlers(Db, echo)
 	router.CommonHandlers(Db, echo)
 
 	//Start a server
