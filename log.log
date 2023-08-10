@@ -1,0 +1,28 @@
+[INFO:] 2023/08/09 20:18:38.481967 driver.go:45: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/09 20:18:38.660702 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/08/09 20:20:37.860931 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/08/09 20:20:37.860931 handler.go:71: Error : 'password must be greater than 8 characters' Status : 400
+[INFO:] 2023/08/09 20:20:43.490908 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/08/09 20:20:43.607450 handler.go:90: Error : 'user already exist' Status : 400
+[INFO:] 2023/08/09 20:27:22.075025 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/09 20:27:22.182834 handler.go:205: Error : 'user not found' Status : 404
+[INFO:] 2023/08/09 20:28:12.013061 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/09 20:28:12.013061 handler.go:145: Error : 'missing Email' Status : 400
+[INFO:] 2023/08/09 20:28:20.647972 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/09 20:28:20.647972 handler.go:145: Error : 'missing Password' Status : 400
+[INFO:] 2023/08/09 20:28:29.235439 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/09 20:28:29.397586 handler.go:199: Error : 'incorrect password' Status : 400
+[INFO:] 2023/08/10 11:11:50.611899 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/10 11:11:50.817885 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/10 11:11:51.180917 driver.go:82: Message : 'Established a successful connection to 'test' database!!!'
+[INFO:] 2023/08/10 11:11:51.354105 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/08/10 11:20:57.672992 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/10 11:20:57.821613 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/08/10 11:48:24.702032 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/10 11:48:24.853779 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/10 11:49:40.330649 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/10 11:49:40.500451 driver.go:44: Message : 'Established a successful connection to online_purchase database!!!'
+[INFO:] 2023/08/10 11:49:40.783691 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 11:49:40.931194 main.go:31: Message : 'Server starts in port 8000...' Status : 200
+[INFO:] 2023/08/10 12:28:07.035849 handler.go:223: Message : 'AddProduct-API called'
+[ERROR:]2023/08/10 12:28:07.036390 handler.go:237: Error : 'missing BrandName' Status : 400
