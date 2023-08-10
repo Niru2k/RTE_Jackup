@@ -1,0 +1,65 @@
+[INFO:] 2023/08/10 11:34:39.949895 driver.go:85: Message : 'Established a successful connection to 'test' database!!!'
+[INFO:] 2023/08/10 11:34:39.950398 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:34:39.950398 handler.go:145: Error : 'missing Email' Status : 400
+[INFO:] 2023/08/10 11:34:39.950398 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:34:40.055625 handler.go:205: Error : 'user not found' Status : 404
+[INFO:] 2023/08/10 11:34:40.055841 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:34:40.056423 handler.go:205: Error : 'user not found' Status : 404
+[INFO:] 2023/08/10 11:34:40.056527 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:34:40.057034 handler.go:205: Error : 'user not found' Status : 404
+[INFO:] 2023/08/10 11:50:20.253129 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 11:50:20.253632 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/08/10 11:50:20.253632 handler.go:51: Error : 'missing Username' Status : 400
+[INFO:] 2023/08/10 11:50:20.253632 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/08/10 11:50:20.254155 handler.go:62: Error : 'Invalid Email' Status : 400
+[INFO:] 2023/08/10 11:50:20.254155 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/08/10 11:50:20.254155 handler.go:62: Error : 'Invalid Email' Status : 400
+[INFO:] 2023/08/10 11:50:20.254155 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/08/10 11:50:20.254155 handler.go:62: Error : 'Invalid Email' Status : 400
+[INFO:] 2023/08/10 11:50:20.254155 handler.go:35: Message : 'signup-API called'
+[INFO:] 2023/08/10 11:50:20.428517 handler.go:118: Message : 'signup successful!!!' Status : 200
+[INFO:] 2023/08/10 11:50:20.428760 handler.go:35: Message : 'signup-API called'
+[ERROR:]2023/08/10 11:50:20.428760 handler.go:62: Error : 'Invalid Email' Status : 400
+[INFO:] 2023/08/10 11:50:27.190836 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 11:50:27.191340 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:50:27.191340 handler.go:145: Error : 'missing Email' Status : 400
+[INFO:] 2023/08/10 11:50:27.191340 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:50:27.301901 handler.go:205: Error : 'user not found' Status : 404
+[INFO:] 2023/08/10 11:50:27.302037 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:50:27.360136 handler.go:199: Error : 'incorrect password' Status : 400
+[INFO:] 2023/08/10 11:50:27.360351 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:50:27.416787 helper.go:16: Error : 'Error at loading .env file'
+[ERROR:]2023/08/10 11:50:27.416787 middleware.go:32: Error : 'Error at loading '.env' file'
+[INFO:] 2023/08/10 11:50:27.420797 handler.go:192: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/08/10 11:50:34.738559 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 11:50:34.739063 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:50:34.739063 handler.go:145: Error : 'missing Email' Status : 400
+[INFO:] 2023/08/10 11:50:34.739578 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:50:34.849284 handler.go:205: Error : 'user not found' Status : 404
+[INFO:] 2023/08/10 11:50:34.850081 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 11:50:34.903985 handler.go:199: Error : 'incorrect password' Status : 400
+[INFO:] 2023/08/10 11:50:34.904399 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/08/10 11:50:34.961002 handler.go:170: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/08/10 12:04:17.056582 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 12:04:17.057107 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 12:04:17.057107 handler.go:145: Error : 'missing Email' Status : 400
+[INFO:] 2023/08/10 12:04:17.057107 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 12:04:17.057647 handler.go:156: Error : 'Invalid Email' Status : 400
+[INFO:] 2023/08/10 12:04:17.057647 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 12:04:17.162875 handler.go:205: Error : 'user not found' Status : 404
+[INFO:] 2023/08/10 12:04:17.163443 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 12:04:17.217163 handler.go:199: Error : 'incorrect password' Status : 400
+[INFO:] 2023/08/10 12:04:17.217866 handler.go:130: Message : 'login-API called'
+[INFO:] 2023/08/10 12:04:17.274357 handler.go:170: Message : 'login successful!!!' Status : 200
+[INFO:] 2023/08/10 12:28:18.231157 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 12:28:18.231660 handler.go:130: Message : 'login-API called'
+[ERROR:]2023/08/10 12:28:18.231861 handler.go:145: Error : 'missing Email' Status : 400
+[INFO:] 2023/08/10 12:28:39.743332 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 12:43:58.879673 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 12:48:46.036566 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 12:51:04.639888 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 15:39:44.269167 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 15:40:17.087245 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 15:40:37.674817 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 15:40:45.461406 driver.go:76: Message : 'Established a successful connection to test database!!!'
+[INFO:] 2023/08/10 15:41:31.336603 driver.go:76: Message : 'Established a successful connection to test database!!!'
